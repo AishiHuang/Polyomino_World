@@ -190,7 +190,7 @@ class MlNet(nn.Module):
             print("Y Type not recognized in directory creation")
             sys.exit()
 
-        self.net_name = "{}_{}_{}_{}_{}_{}_{}_{}".format(x_type, y_type,
+        self.net_name = "{}_{}_{}_{}_{}_{}_{}_{}_omit_red_color_first_train".format(x_type, y_type,
                                                          self.start_datetime[0],
                                                          self.start_datetime[1],
                                                          self.start_datetime[2],
@@ -238,6 +238,7 @@ class MlNet(nn.Module):
         f.write("learning_rate: {}\n".format(self.learning_rate))
         f.write("weight_init: {}\n".format(self.weight_init))
         f.write("training_set: {}\n".format(self.training_set.world_state_filename))
+        # may need adding testing set
         f.write("current_epoch: {}\n".format(self.current_epoch))
         f.write("training_time: {}".format(self.training_time))
         f.close()

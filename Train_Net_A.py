@@ -7,21 +7,45 @@ def main():
     hidden_size = 32
     hidden_actf = 'tanh'
     learning_rate = 0.20
-    num_epochs = 9000
+    num_epochs = 1000
     weight_init = 0.00001
     output_freq = 25
     verbose = False
-    x_type = 'WorldState'
-    y_type = 'WorldState'
+    x_type = 'WorldState' 
+    y_type = 'FeatureVector' #'WorldState'
     included_features = [1, 1, 1, 0]  # Include: Shape, Size, Color, Action
     shuffle_sequences = True
     shuffle_events = False
     processor = 'CPU'
     optimizer = 'SGD'
 
-    training_file = 'w8-8_s9_c8_0_100_0.csv'
-    test_file = 'w8-8_s9_c8_0_10_0.csv'
-    network_directory = 'WS_WS_2020_2_9_10_44_25'
+    training_file = 'w8-8_s9_c7_0_100_1_train_omit_red_color.csv'
+    # w8-8_s9_c1_0_100_1_second_train_one_color
+    # w8-8_s9_c7_0_100_1_train_omit_one_color.csv
+    # w8-8_s1_c8_0_100_1_second_train_one_shape
+    # w8-8_s8_c8_0_100_1_train_omit_mono_shape
+    # w8-8_s1_c8_0_100_1_second_train_mono_shape
+    # w8-8_s8_c8_0_100_1_train_omit_domino_shape
+
+    # w8-8_s9_c8_0_100_1_first_half_variant_train_(one_action)
+    # w8-8_s9_c8_0_100_1_first_half_variant_train_(full_action)
+    # w8-8_s9_c8_0_100_1_second_half_variant_train_(one_action)
+    test_file = 'w8-8_s9_c8_0_10_1_complete_test.csv' 
+    # 'w8-8_s9_c8_0_10_1_complete_test' 
+    # 'w8-8_s9_c1_0_10_1_test_black_color.csv'
+    # w8-8_s1_c8_0_10_1_test_mono_shape
+    # w8-8_s1_c8_0_10_1_test_domino_shape
+
+    # w8-8_s9_c8_0_10_1_second_half_variant_test(one_action)
+    # w8-8_s9_c8_0_10_1_second_half_variant_test(full_action)
+    network_directory = 'WS_FV_2021_1_8_0_32_57_omit_red_color_second_train_complete'
+    # WS_FV_2020_12_28_17_0_28_omit_one_shape_second_train_(first_omit_second_complete)
+    # WS_FV_2021_1_3_16_12_19_omit_one_color_second_train_(first_omit_second_complete)
+    # WS_FV_2021_1_6_23_29_45_omit_mono_shape_second_train_omit_only
+    # WS_FV_2021_1_6_23_29_45_omit_mono_shape_second_train_complete
+
+    # WS_FV_2021_1_6_18_6_8_half_variant_second_train(one_action)_omit_only
+    # WS_FV_2021_1_6_18_6_8_half_variant_second_train(one_action)_complete
 
     training_set = dataset.DataSet(training_file, None, included_features, processor)
     test_set = dataset.DataSet(test_file, None, included_features, processor)

@@ -209,7 +209,7 @@ class Domino(Shape):
         self.size = 2
 
         self.num_variants = 2
-        self.variant_list = [0, 1]
+        self.variant_list = [1] # [0, 1]
         self.active_cell_dict = {0: [(0, 0), (0, 1)],
                                  1: [(0, 0), (1, 0)]}
         self.flip_dict = {0: (0, 0),
@@ -228,7 +228,7 @@ class Tromino1(Shape):
         self.size = 3
 
         self.num_variants = 2
-        self.variant_list = [0, 1]
+        self.variant_list = [1] # [0, 1]
         self.active_cell_dict = {0: [(0, 0), (1, 0), (2, 0)],
                                  1: [(0, 0), (0, 1), (0, 2)]}
         self.flip_dict = {0: (0, 0),
@@ -248,7 +248,7 @@ class Tromino2(Shape):
         self.size = 3
 
         self.num_variants = 4
-        self.variant_list = [0, 1, 2, 3]
+        self.variant_list = [2, 3] #[0, 1, 2, 3]
         self.active_cell_dict = {0: [(0, 0), (0, 1), (1, 0)],  # missing top right
                                  1: [(0, 0), (0, 1), (1, 1)],  # missing bottom right
                                  2: [(0, 1), (1, 0), (1, 1)],  # missing bottom left
@@ -300,7 +300,7 @@ class Tetromino2(Shape):
         self.size = 4
 
         self.num_variants = 2
-        self.variant_list = [0, 1]
+        self.variant_list = [1] #[0, 1]
         self.active_cell_dict = {0: [(0, 0), (0, 1), (0, 2), (0, 3)],
                                  1: [(0, 0), (1, 0), (2, 0), (3, 0)]}
 
@@ -324,7 +324,7 @@ class Tetromino3(Shape):
         self.size = 4
 
         self.num_variants = 4
-        self.variant_list = [0, 1, 2, 3]
+        self.variant_list = [2, 3] #[0, 1, 2, 3]
         self.active_cell_dict = {0: [(0, 0), (1, 0), (2, 0), (1, 1)],
                                  1: [(0, 0), (0, 1), (0, 2), (1, 1)],
                                  2: [(0, 1), (1, 1), (2, 1), (1, 0)],
@@ -354,7 +354,7 @@ class Tetromino4(Shape):
         self.size = 4
 
         self.num_variants = 8
-        self.variant_list = [0, 1, 2, 3, 4, 5, 6, 7]
+        self.variant_list = [4, 5, 6, 7] #[0, 1, 2, 3, 4, 5, 6, 7]
         self.active_cell_dict = {0: [(0, 0), (0, 1), (1, 1), (2, 1)],
                                  1: [(0, 2), (1, 2), (1, 1), (1, 0)],
                                  2: [(0, 0), (1, 0), (2, 0), (2, 1)],
@@ -398,7 +398,7 @@ class Tetromino5(Shape):
         self.size = 4
 
         self.num_variants = 4
-        self.variant_list = [0, 1, 2, 3]
+        self.variant_list = [2,3] #[0, 1, 2, 3]
         self.active_cell_dict = {0: [(0, 0), (0, 1), (1, 1), (1, 2)],
                                  1: [(0, 1), (1, 0), (1, 1), (2, 0)],
                                  2: [(0, 1), (0, 2), (1, 0), (1, 1)],

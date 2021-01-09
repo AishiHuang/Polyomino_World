@@ -16,16 +16,16 @@ def main():
     # if 0, will do all combinations of shapes and colors
     num_types = 0
 
-    num_instances_per_type = 10   # how many sequences for each colored shape
+    num_instances_per_type = 100   # how many sequences for each colored shape
     num_events_per_scene = 1  # num of events per sequence
 
     ############################
     # custom shapes/bounds = set True to use
-    use_custom = False
-    custom_shape_list = ['monomino', 'domino', 'tromino1', 'tetromino1']
-    custom_color_list = color_list  # ['black']
-    custom_bounds = [0, 4, 0, 4]  # xmin, xmax, ymin,ymax
-    background_color = 'random'
+    use_custom = True # False
+    custom_shape_list = shape_list
+    custom_color_list = color_list
+    custom_bounds = [0, 8, 0, 8]  # xmin, xmax, ymin,ymax
+    background_color = 'grey' #'random'
     #############################
     # adn this
     if use_custom:

@@ -145,7 +145,11 @@ class DataSet:
         self.sequence_list = []
         self.num_events = 0
         sequence_data = []
-        f = open('data/' + self.world_state_filename)
+        # f = open('data/' + self.world_state_filename) 
+        # f = open('data/' + 'w8-8_s9_c7_0_100_1_train_omit_one_color.csv') 
+        # open('data/' + 'w8-8_s9_c1_0_100_1_second_train_one_color.csv') 
+        # open('data/' + 'w8-8_s1_c8_0_100_1_second_train_one_shape.csv') 
+        f = open('data/' + 'w8-8_s9_c1_0_100_1_second_train_red_color.csv') 
         for line in f:
             self.num_events += 1
             data = (line.strip().strip('\n').strip()).split(',')
